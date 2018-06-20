@@ -1,24 +1,6 @@
-var http = require('http');
-var dt = require('./firstmodule');
+const express = require('express')
+const app = express()
 
-var url = require('url');
-var fs = require('fs');
+app.get('/', (req, res) => res.send('Hello World!'))
 
-
-
-http.createServer(function(req, res) {
-  res.writeHead(200, {
-    'Content-Type': 'text/html'
-  });
- fs.readFile('demo.html', function (err,data){
-   res.writeHead(200,{'Content-Type':'text/html'});
-   res.write(data);
-   res.end;
- });
-  // var q = url.parse(req.url, true).query;
-  // var txt = q.year + " " + q.month;
-
-  // res.write("The date and time are currently: " + dt.myDateTime())
-  // res.write(req.url);
-  // res.end(txt);
-}).listen(8080);
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
