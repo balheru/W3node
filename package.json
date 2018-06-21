@@ -5,7 +5,8 @@
   "main": "DBConnection.js",
   "dependencies": {
     "express": "^4.16.3",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "request": "^2.87.0"
   },
   "devDependencies": {},
   "scripts": {
